@@ -1,5 +1,8 @@
-class Carro:
-	def __init__(self, fabricante):
+from veiculo import Veiculo
+
+class Carro(Veiculo):
+	def __init__(self, rodas, fabricante):
+		Veiculo.__init__(self, rodas)	#chamada explicita ao construtor da super classe
 		self.fabricante = fabricante
 		self.acessorios = []
 
