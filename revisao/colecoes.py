@@ -19,3 +19,7 @@ if __name__ == "__main__":
 	print coisas.keys()
 	print coisas.values()
 	print coisas.items()
+	del coisas[1]
+	print coisas
+	coisas["Maria"][0] = "espinafre"
+	print coisas["Maria"]
