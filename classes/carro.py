@@ -1,8 +1,14 @@
 from veiculo import Veiculo
 
 class Carro(Veiculo):
-	def __init__(self, rodas, fabricante):
-		Veiculo.__init__(self, rodas)	#chamada explicita ao construtor da super classe
+	rodas = 4
+
+	@classmethod
+	def algo_da_classe(manoel):
+		print 'A classe fez algo em prol de todos seus objetos!'
+
+	def __init__(self, chassi, fabricante):
+		Veiculo.__init__(self, chassi)	#chamada explicita ao construtor da super classe
 		self.fabricante = fabricante
 		self.acessorios = []
 

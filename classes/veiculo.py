@@ -1,3 +1,3 @@
 class Veiculo:
-	def __init__(self, rodas):
-		self.rodas = rodas
+	def __init__(self, chassi):
+		self.chassi = chassi
