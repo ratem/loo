@@ -1,6 +1,9 @@
+from base import Base
 from veiculo import Veiculo
 
 class Carro(Veiculo):
+	coletivo = {}
+	ultima_id = 0
 	rodas = 4
 
 	@classmethod
@@ -9,6 +12,8 @@ class Carro(Veiculo):
 
 	def __init__(self, chassi, fabricante):
 		Veiculo.__init__(self, chassi)	#chamada explicita ao construtor da super classe
+		Carro.ultima_id = Base.inserir(self, Carro.coletivo, Carro.ultima_id)
+		self.id = Carro.ultima_id
 		self.fabricante = fabricante
 		self.acessorios = []
 
