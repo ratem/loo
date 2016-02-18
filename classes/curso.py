@@ -13,3 +13,6 @@ class Curso(Base):
 			raise TypeError('Deveria ser aluno!')		
 		self.alunos[aluno.id] = aluno
 
+	def cadastrar_disciplina(self):
+		pass
+
