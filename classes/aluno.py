@@ -1,5 +1,6 @@
 from base import Base
 from pessoa import Pessoa
+from curso import Curso
 
 class Aluno(Pessoa):
 	coletivo = {}
@@ -11,4 +12,10 @@ class Aluno(Pessoa):
 	def __init__(self, nome, data_nascimento):
 		Pessoa.__init__(self, nome, data_nascimento)
 		self.id = Aluno.ultima_id = Base.inserir(self, Aluno.coletivo, Aluno.ultima_id)
+
+	def matricular(self, curso):
 		self.matricula = self.gerar_matricula()
+		if(not isinstance(curso, Curso)):
+			raise TypeError('Deveria ser curso!')		
+		self.curso = curso
+		curso.matricular_aluno(self)
