@@ -7,12 +7,13 @@ class Curso(Base):
 	def __init__(self, nome):
 		self.id = Curso.ultima_id = Base.inserir(self, Curso.coletivo, Curso.ultima_id)
 		self.alunos = {}
+		self.disciplinas = {}
 
 	def matricular_aluno(self, aluno):
 		if(aluno.__class__.__name__ != 'Aluno'): #Nao emprega isinstance para nao importar Aluno, o que criaria referencia cruzada
 			raise TypeError('Deveria ser aluno!')		
 		self.alunos[aluno.id] = aluno
 
-	def cadastrar_disciplina(self):
-		pass
+	def incluir_disciplina(self, disciplina):
+		self.disciplinas[disciplina.id] = disciplina
 

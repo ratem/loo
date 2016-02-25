@@ -19,3 +19,7 @@ class Aluno(Pessoa):
 			raise TypeError('Deveria ser curso!')		
 		self.curso = curso
 		curso.matricular_aluno(self)
+		self.desempenhos = {}
+
+	def incluir_desempenho(self, desempenho):
+		self.desempenhos[desempenho.disciplina.id] = desempenho
