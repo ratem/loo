@@ -23,3 +23,8 @@ class Aluno(Pessoa):
 
 	def incluir_desempenho(self, desempenho):
 		self.desempenhos[desempenho.disciplina.id] = desempenho
+
+	def listar_desempenhos(self):
+		for d in self.desempenhos.values():
+			print d.disciplina.nome, d.nota, d.faltas
+
