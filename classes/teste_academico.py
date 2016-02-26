@@ -14,6 +14,13 @@ def testar():
 	d2 = Desempenho(a,e, 6,2)
 	d3 = Desempenho(a,f, 7,3)
 	a.listar_desempenhos()
+	a2 = Aluno('Maria','01/01/01')	
+	a2.matricular(c)
+	a3 = Aluno('Jose','01/01/01')	
+	a3.matricular(c)
+	d4 = Desempenho(a2,d, 4,3)
+	d5 = Desempenho(a3,d, 7,0)
+	d.listar_alunos()
 
 if __name__ == "__main__":
     testar()
