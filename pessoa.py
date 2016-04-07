@@ -10,3 +10,5 @@ class Pessoa(Base):
 		self.nome = nome
 		self.endereco = endereco
 
+	def alterar_endereco(self, endereco_novo):
+		self.endereco = endereco_novo

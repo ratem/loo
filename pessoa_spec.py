@@ -18,4 +18,9 @@ class PessoaSpec(unittest.TestCase):
 
 	def test_alterar_endereco(self):
 		self.p.alterar_endereco('Rua dos Jecas, 1')
-		self.p.endereco |should| equal_to('Rua dos Jecas, 1')
+		self.p.endereco |should| equal_to('Rua dos Jecas, ')
+
+#Alternativa para problemas de instalacao:
+#Nao usar Makefile, acrescentar as linhas abaixo e chamar diretamente com o python
+if __name__ == "__main__":
+    unittest.main()
